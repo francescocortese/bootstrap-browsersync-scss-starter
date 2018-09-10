@@ -1,2 +1,2 @@
 # bootstrap-browsersync-scss-starter
-Bootstrap Starter scss, gulp, browsersync, gulp-file-include
+Bootstrap Starterkit working with scss, gulp, browsersync, gulp-file-include
