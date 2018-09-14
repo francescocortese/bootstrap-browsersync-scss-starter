@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "sources": [
+    "main.js"
+  ],
+  "names": [
+    "alert"
+  ],
+  "mappings": "AAAAA,MAAM,MACNA,MAAM",
+  "file": "main.js",
+  "sourcesContent": [
+    "alert('yo');\nalert('yo2');\n"
+  ]
+}

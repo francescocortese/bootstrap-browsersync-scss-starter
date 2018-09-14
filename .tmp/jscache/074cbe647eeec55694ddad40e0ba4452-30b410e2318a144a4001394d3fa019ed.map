@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [
+    "main.js"
+  ],
+  "names": [
+    "alert",
+    "sdfdas"
+  ],
+  "mappings": "AAAAA,MAAM,MACNA,MAAM,OACNC",
+  "file": "main.js",
+  "sourcesContent": [
+    "alert('yo');\nalert('yo2');\nsdfdas\n"
+  ]
+}

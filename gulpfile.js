@@ -6,6 +6,11 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include');
 
 
+    // including plugins
+var uglify = require("gulp-uglify"),
+sourcemaps = require('gulp-sourcemaps'),
+  fsCache = require('gulp-fs-cache');
+
 // Gulp Task SASS, postcss/autoprefixer, Browsersync
 gulp.task('sass', function() {
     return gulp.src('./app/scss/main.scss')
@@ -39,6 +44,19 @@ gulp.task('fileinclude', function() {
 gulp.task('fileinclude-watch', ['fileinclude']);
 
 
+// Uglify - Cache
+gulp.task('scripts', function () {
+  var jsFsCache = fsCache('.tmp/jscache'); // save cache to .tmp/jscache
+  return gulp.src('./app/js/**/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(jsFsCache)
+      .pipe(uglify())
+      .pipe(jsFsCache.restore)
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('./app/build/js/')).pipe(browserSync.stream());
+});
+
+
 // Compile SASS
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
@@ -47,6 +65,7 @@ gulp.task('serve', ['sass'], function() {
     // warch file-include for root and inc
     gulp.watch(['./app/inc/*.html', './app/*.html'], ['fileinclude-watch']);
     gulp.watch("./app/scss/**/*.scss", ['sass']);
+    gulp.watch("./app/js/**/*.js", ['scripts']);
     gulp.watch("./app/*.html").on('change', browserSync.reload);
 });
 

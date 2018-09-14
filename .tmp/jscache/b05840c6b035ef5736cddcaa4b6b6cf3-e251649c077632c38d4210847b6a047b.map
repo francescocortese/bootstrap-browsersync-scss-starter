@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "sources": [
+    "plugins.js"
+  ],
+  "names": [
+    "alert"
+  ],
+  "mappings": "AAAAA,MAAM",
+  "file": "plugins.js",
+  "sourcesContent": [
+    "alert('fsdafd');\n"
+  ]
+}

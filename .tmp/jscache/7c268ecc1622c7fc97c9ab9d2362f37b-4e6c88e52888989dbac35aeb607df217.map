@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "sources": [
+    "bootstrap/test.js"
+  ],
+  "names": [
+    "alert"
+  ],
+  "mappings": "AAAAA,MAAM",
+  "file": "bootstrap/test.js",
+  "sourcesContent": [
+    "alert('alert test');\n"
+  ]
+}
