@@ -15,10 +15,6 @@ $theme-colors: (
   "dark":       #343a40
 );
 
-/* Borders */
-
-//$border-radius: 10px;
-
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "commons";
