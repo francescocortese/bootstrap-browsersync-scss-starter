@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 // Gulp Task SASS, postcss/autoprefixer, Browsersync
 gulp.task('sass', function() {
-    return gulp.src('./sass/main.scss')
+    return gulp.src('./app/scss/main.scss')
         .pipe(sass())
         .pipe(postcss([ autoprefixer({ browsers: [
           'Chrome >= 35',
@@ -20,18 +20,18 @@ gulp.task('sass', function() {
           'Android 2.3',
           'Android >= 4',
           'Opera >= 12']})]))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./app/build/css'))
         .pipe(browserSync.stream());
 });
 
 // File Include
 gulp.task('fileinclude', function() {
-  return gulp.src(['*.html'])
+  return gulp.src(['./app/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('./app/build/'))
     .pipe(browserSync.stream());
 });
 
@@ -42,12 +42,12 @@ gulp.task('fileinclude-watch', ['fileinclude']);
 // Compile SASS
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "./"
+        server: "./app/build/"
     });
     // warch file-include for root and inc
-    gulp.watch(['./inc/*.html', '*.html'], ['fileinclude-watch']);
-    gulp.watch("./sass/main.scss", ['sass']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch(['./app/inc/*.html', './app/*.html'], ['fileinclude-watch']);
+    gulp.watch("./app/scss/**/*.scss", ['sass']);
+    gulp.watch("./app/*.html").on('change', browserSync.reload);
 });
 
 // Creating a server at the root

@@ -16,6 +16,7 @@
     "gulp-file-include": "^2.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
     "stylelint": "^9.5.0"
   },
   "dependencies": {
