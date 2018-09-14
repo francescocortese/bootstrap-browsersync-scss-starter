@@ -1,2 +1,0 @@
-alert("fsdafd");
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBsdWdpbnMuanMiXSwibmFtZXMiOlsiYWxlcnQiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNIiwiZmlsZSI6InBsdWdpbnMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJhbGVydCgnZnNkYWZkJyk7XG4iXX0=

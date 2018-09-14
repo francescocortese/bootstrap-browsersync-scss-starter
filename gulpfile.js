@@ -6,7 +6,10 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include')
     uglify = require("gulp-uglify"),
     sourcemaps = require('gulp-sourcemaps'),
-    fsCache = require('gulp-fs-cache');
+    fsCache = require('gulp-fs-cache'),
+    rename = require("gulp-rename"),
+    concat = require('gulp-concat');
+
 
 // Gulp Task SASS, postcss/autoprefixer, Browsersync
 gulp.task('sass', function() {
@@ -43,10 +46,12 @@ gulp.task('fileinclude-watch', ['fileinclude']);
 // Uglify - Cache
 gulp.task('scripts', function () {
   var jsFsCache = fsCache('.tmp/jscache'); // save cache to .tmp/jscache
-  return gulp.src('./app/js/**/*.js')
+  return gulp.src(['./app/js/plugins.js', './app/js/main.js'])
+      .pipe(concat('app.js'))
       .pipe(sourcemaps.init())
       .pipe(jsFsCache)
       .pipe(uglify())
+      .pipe(rename('app.min.js'))
       .pipe(jsFsCache.restore)
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('./app/build/js/')).pipe(browserSync.stream());
