@@ -3,13 +3,10 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
-    fileinclude = require('gulp-file-include');
-
-
-    // including plugins
-var uglify = require("gulp-uglify"),
-sourcemaps = require('gulp-sourcemaps'),
-  fsCache = require('gulp-fs-cache');
+    fileinclude = require('gulp-file-include')
+    uglify = require("gulp-uglify"),
+    sourcemaps = require('gulp-sourcemaps'),
+    fsCache = require('gulp-fs-cache');
 
 // Gulp Task SASS, postcss/autoprefixer, Browsersync
 gulp.task('sass', function() {
@@ -43,7 +40,6 @@ gulp.task('fileinclude', function() {
 // Build- watch file fileinclude
 gulp.task('fileinclude-watch', ['fileinclude']);
 
-
 // Uglify - Cache
 gulp.task('scripts', function () {
   var jsFsCache = fsCache('.tmp/jscache'); // save cache to .tmp/jscache
@@ -55,7 +51,6 @@ gulp.task('scripts', function () {
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('./app/build/js/')).pipe(browserSync.stream());
 });
-
 
 // Compile SASS
 gulp.task('serve', ['sass'], function() {
