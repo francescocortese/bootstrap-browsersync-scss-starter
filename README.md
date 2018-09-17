@@ -51,8 +51,27 @@ Inside the app there is all you need for your project
    │   └── unit               
    ├── scss                     
    │   ├── bootstrap          # All Bootstrap style and scss files
-   |   ├── main.scss          # Main file with all the @import      
+   │    ├── main.scss          # Main file with all the @import      
    │   └── _commons.scss      # Your JQuery plugins
    └── ...
 
+```
+
+* The folder ./app/js is just for compile and build the file plugins.js and main.js. For other plugins or scripts, put .js files into the ./app/build/js/
+
+### Bootrastrap 4.0
+Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. If you prefer used it without the node_modules, is already included inside the SCSS folder. The Bootstrap's js are included in the folder ./app/build/js/. Bootrastrap need popper.js.
+
+``` html
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.min.js"></script>
+```
+
+### GULP FILE INCLUDE
+You can include files thanks to gulp-file-include. All the included files are in the ./app/inc folder.
+``` html
+# just put this code inside your .html files
+@@include('inc/_footer.html')
 ```
