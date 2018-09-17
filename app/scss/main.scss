@@ -15,9 +15,9 @@ $theme-colors: (
   "dark":       #343a40
 );
 
-// Import bootstrap direclty from npm dependencies, good for updates
+// Import Bootstrap direclty from npm dependencies, good for updates, up to you.
 //@import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Import from scss folder.
+// Import Bootstrap from scss folder.
 @import "bootstrap/bootstrap";
 @import "commons";
