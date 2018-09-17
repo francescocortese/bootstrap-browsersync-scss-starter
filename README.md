@@ -14,7 +14,7 @@ Bootstrap Starterkit working with scss, gulp, browsersync, gulp-file-include. Ve
 * stylelint
 * autoprefixer
 
-### Quick Start
+## Quick Start
 For installation, clone or download the package and open the terminal to run:
 ```shell
 
@@ -29,7 +29,7 @@ gulp
 ```
 After installation and run gulp, browser-sync will lunch the automatically with http://localhost:3000 on the port :3000. On the port :3001 will find other browser-sync feature.
 
-### Structure
+## Structure
 Inside the app there is all you need for your project
 ```shell
 
@@ -58,7 +58,7 @@ Inside the app there is all you need for your project
 
 * The folder ./app/js is just for compile and build the file plugins.js and main.js. For other plugins or scripts, put .js files into the ./app/build/js/
 
-### Bootrastrap 4.0
+## Bootrastrap 4.0
 Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. If you prefer used it without the node_modules, is already included inside the SCSS folder. The Bootstrap's js are included in the folder ./app/build/js/. Bootrastrap need popper.js.
 
 ``` html
