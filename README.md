@@ -1,6 +1,5 @@
 # bootstrap-browsersync-scss-starter
-Bootstrap Starterkit working with scss, gulp, browsersync, gulp-file-include
-
+Bootstrap Starterkit working with scss, gulp, browsersync, gulp-file-include. Version 1.0
 
 ### Prerequisites
 * node js >=6.9.1
@@ -63,6 +62,7 @@ Inside the app there is all you need for your project
 Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. If you prefer used it without the node_modules, is already included inside the SCSS folder. The Bootstrap's js are included in the folder ./app/build/js/. Bootrastrap need popper.js.
 
 ``` html
+<!-- scripts insde the ./app/inc/_footer.html  -->
 <script src="js/jquery-3.3.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -72,6 +72,6 @@ Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. I
 ### GULP FILE INCLUDE
 You can include files thanks to gulp-file-include. All the included files are in the ./app/inc folder.
 ``` html
-# just put this code inside your .html files
+<!-- just put this code inside your .html files -->
 @@include('inc/_footer.html')
 ```
