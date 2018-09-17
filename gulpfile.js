@@ -63,7 +63,7 @@ gulp.task('serve', ['sass'], function() {
         server: "./app/build/"
     });
     // warch file-include for root and inc
-    gulp.watch(['./app/inc/*.html', './app/*.html'], ['fileinclude-watch']);
+    gulp.watch(['./app/inc/**/*.html', './app/*.html'], ['fileinclude-watch']);
     gulp.watch("./app/scss/**/*.scss", ['sass']);
     gulp.watch("./app/js/**/*.js", ['scripts']);
     gulp.watch("./app/*.html").on('change', browserSync.reload);
