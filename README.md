@@ -6,12 +6,53 @@ Bootstrap Starterkit working with scss, gulp, browsersync, gulp-file-include
 * node js >=6.9.1
 * npm >=3.10.10
 
+### Main Dependencies
+* browser-sync
+* gulp
+* gulp-file-include
+* gulp-sass
+* gulp-uglify
+* stylelint
+* autoprefixer
+
 ### Quick Start
+For installation, clone or download the package and open the terminal to run:
 ```shell
 
-# Install browserSync and other node dependencies
+# Go to the root folder of your project, or just type cd, space and drag n drop the folder in terminal
+cd /main-folder-of-your-project
+
+# Install browserSync and all the node dependencies that we need
 npm install
 
-# Start browserSync server, serve from tmp folder
+# Start the gulp task and browserSync
 gulp
+```
+After installation and run gulp, browser-sync will lunch the automatically with http://localhost:3000 on the port :3000. On the port :3001 will find other browser-sync feature.
+
+### Structure
+Inside the app there is all you need for your project
+```shell
+
+  app
+   ├── build                  # Build folder
+   │   ├── css                # CSS builded files from SCSS folder
+   │   └── js                 # JS folder with app.min.js(plugins.js + main.js) builded from ./app/js/ folder
+   ├── inc                    # Include folder via gulp-file-include (_header.html, _footer.html, etc.)
+   ├── js                     # Test files (alternatively `spec` or `tests`)
+   │   ├── main.js            # Your scripts
+   │   └──  plugins.js        # Your JQuery plugins
+   ├── js                     
+   │   ├── main.js            # Your scripts
+   │   └── plugins.js         # Your JQuery plugins
+   ├── js                     
+   │   ├── main.js            # Your scripts
+   │   └── plugins.js         # Your JQuery plugins
+   │   └── unit               
+   ├── scss                     
+   │   ├── bootstrap          # All Bootstrap style and scss files
+   |   ├── main.scss          # Main file with all the @import      
+   │   └── _commons.scss      # Your JQuery plugins
+   └── ...
+
 ```
