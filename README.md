@@ -58,7 +58,7 @@ Inside the app there is all you need for your project
 
 * The folder ./app/js is just for compile and build the file plugins.js and main.js. For other plugins or scripts, put .js files into the ./app/build/js/
 
-### Bootrastrap 4.0
+## Bootrastrap 4.0
 Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. If you prefer used it without the node_modules, is already included inside the SCSS folder. The Bootstrap's js are included in the folder ./app/build/js/. Bootrastrap need popper.js.
 
 ``` html
@@ -69,18 +69,18 @@ Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. I
 <script src="js/app.min.js"></script>
 ```
 
-### GULP FILE INCLUDE
+### Gulp file inlcude
 You can include files thanks to gulp-file-include. All the included files are in the ./app/inc folder.
 ``` html
 <!-- just put this code inside your .html files -->
 @@include('inc/_footer.html')
 ```
 
-### GULP FILE INCLUDE
+### Stylelint
 Stylelint is included for SCSS. You can install on your own editor via this guide:
 https://stylelint.io/user-guide/complementary-tools/#editor-plugins
 
-## Other documentation
+### Other documentation
 * Bootstrap layout and components: https://getbootstrap.com/docs/4.1/layout/overview/
 * BrowserSync: https://www.browsersync.io/
 * SCSS: https://sass-lang.com/guide
