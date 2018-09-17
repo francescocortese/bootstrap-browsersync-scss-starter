@@ -69,9 +69,19 @@ Bootstrap 4.0 SCSS is included via dependencie inside the node_modules folder. I
 <script src="js/app.min.js"></script>
 ```
 
-#### GULP FILE INCLUDE
+### GULP FILE INCLUDE
 You can include files thanks to gulp-file-include. All the included files are in the ./app/inc folder.
 ``` html
 <!-- just put this code inside your .html files -->
 @@include('inc/_footer.html')
 ```
+
+### GULP FILE INCLUDE
+Stylelint is included for SCSS. You can install on your own editor via this guide:
+https://stylelint.io/user-guide/complementary-tools/#editor-plugins
+
+## Other documentation
+* Bootstrap layout and components: https://getbootstrap.com/docs/4.1/layout/overview/
+* BrowserSync: https://www.browsersync.io/
+* SCSS: https://sass-lang.com/guide
+* Stylelint: https://stylelint.io/
