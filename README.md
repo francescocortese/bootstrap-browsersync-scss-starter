@@ -1,10 +1,6 @@
 # bootstrap-browsersync-scss-starter
 Bootstrap Starterkit working with scss, gulp, browsersync, gulp-file-include. Version 1.0
 
-### Prerequisites
-* node js >=6.9.1
-* npm >=3.10.10
-
 ### Main Dependencies
 * browser-sync
 * gulp
@@ -25,7 +21,7 @@ cd /main-folder-of-your-project
 npm install
 
 # Start the gulp task and browserSync
-gulp
+npm start
 ```
 After installation and run gulp, browser-sync will lunch the automatically with http://localhost:3000 on the port :3000. On the port :3001 will find other browser-sync feature.
 
